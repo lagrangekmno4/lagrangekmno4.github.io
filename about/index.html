@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/10 
+      关于 
       
       
       |
@@ -109,41 +109,158 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">about</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-10-21 22:09:21
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <ul>
+<li>2003年生人，性别男，生于山东省泰安市。ID 本身没有任何意义，和本人真实姓名也毫无关系，如果硬要说的话，Lagrange和我姓的首字母是一样的，但即使是这样的说法也完全没有道理，因为该ID最初来自于我的B站ID“拉格朗日高锰酸钾”，权且作为一个较容易记住（虽然也不是太容易记住）的代号。现就读于清华大学数学科学系2022级，但其实是2021年来的华子。</li>
+<li>在学校基本上属于透明人的角色，本科的第一年由于对未来感到非常迷茫而非常痛苦，并在这样的背景下做出了大二降转数学的决定。数学水平一般，在整个华子凭借科班优势应该处于上游，在数学系处于中上游水平，在求真趋近于下确界。</li>
+<li>如果没有发生黑天鹅事件，大概率会在 2026 年前往美国读（广义）应用数学相关的数学 PhD ，方向未定，欢迎有相似想法的朋友们联系我。</li>
+<li>喜欢在数学领域进行random walks，或者更准确地说，喜欢在除了极个别领域之外的所有领域进行random walks。</li>
+<li>在MBTI人格测试中稳定获得建筑师(INTJ)的人格特征，但个人感觉并不完全能够概括本人。N和T是非常刻板的，但我在做有些事情时很有J人的特征，做另一些事情时有P人的特征。是I人但喜欢和自己觉得想要聊天的人聊天，不太能接受完全和外界隔离的生活。</li>
+</ul>
+<h2 id="我的奇特爱好"><a href="#我的奇特爱好" class="headerlink" title="我的奇特爱好"></a>我的奇特爱好</h2><p>数学系在清华大学是一个 out of  $3\sigma$ 的院系，作为数学系的一个学生，也有很多 out of $3\sigma$的特性：</p>
+<ul>
+<li><del>在内卷成风的清华大学看起来课余时间非常多，用微信等即时社交软件基本可以做到秒回，约饭等社交活动基本可以做到有求必应</del> ，最近为了养成专注工作的习惯在改正这样的问题，所以每天大概会有5-6小时的时间我在网络上是完全失踪的。</li>
+<li>不太参加学校和院系组织的活动，无论是社工组织还是社团组织。如果有钢琴社或许会参加，但可惜并没有。<del>一直想加个合唱队，虽然大概率要被刷掉</del> 结果确实被刷掉了，但是意外进了学校的交响队零基础班，只是不知道能干些什么。</li>
+<li>保持着用钢笔进行手写的习惯，除了高考之外从来不用其它类型的笔进行日常书写，会经常用毛笔写字，但水平感人。</li>
+<li>酷爱音乐，人菜瘾大。每周会花费大量的时间练钢琴和在网络上学习钢琴技法，可以经常在蒙民伟楼的二楼琴房找到我。除此之外一直有学习编曲的打算，但至今仍未开始行动。鉴赏方面以古典音乐和ACGN音乐为主，但理论水平不高。</li>
+<li>生活方式及其原始，绝大部分的生产力来源仍然是纸笔，电脑目前唯一的作用是码字。对代码有一种天生的抵触心理，但目前正在尽力改变。</li>
+</ul>
+<h2 id="关于未来"><a href="#关于未来" class="headerlink" title="关于未来"></a>关于未来</h2><p>自己的未来充满了相当多的不确定性，但大概率会沿着下面的想法走下去：</p>
+<ul>
+<li>希望从事自己所热爱领域的研究工作，并且希望为解决教育资源不平等、实现社会的共同富裕贡献自己微薄的一份力量。</li>
+<li>一直有推进数学和科学领域学习网络开源工作的愿望，大概会从模仿3Blue1Brown的数学科普视频制作开始，但目前暂时还在学习阶段。</li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-10-21 22:09:21
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="我的青春数学物语果然有问题——5-8周刊">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/mathstory/">
-            <span>我的青春数学物语果然有问题——5-8周刊</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="hello-world">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/world/">
-            <span>hello-world</span>
-          </a>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E5%A5%87%E7%89%B9%E7%88%B1%E5%A5%BD"><span class="toc-text">我的奇特爱好</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%9C%AA%E6%9D%A5"><span class="toc-text">关于未来</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'KT54T08PQj0P3C1qnUfcBJCR-gzGzoHsz',
+        appKey: 'vzHGva5HtwNi5pMFrfLCvcNv',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -417,6 +534,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + about + '&url=' + http%3A%2F%2Flarangekmno4.github.io%2Fabout%2Findex.html + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://larangekmno4.github.io/about/index.html" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>

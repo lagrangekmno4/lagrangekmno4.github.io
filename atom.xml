@@ -6,7 +6,7 @@
   <link href="http://larangekmno4.github.io/atom.xml" rel="self"/>
   
   <link href="http://larangekmno4.github.io/"/>
-  <updated>2023-10-21T11:51:08.696Z</updated>
+  <updated>2023-10-21T14:13:09.482Z</updated>
   <id>http://larangekmno4.github.io/</id>
   
   <author>
@@ -17,18 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://larangekmno4.github.io/2023/10/21/hello-world/"/>
-    <id>http://larangekmno4.github.io/2023/10/21/hello-world/</id>
-    <published>2023-10-21T11:51:08.695Z</published>
-    <updated>2023-10-21T11:51:08.696Z</updated>
+    <title>我的青春数学物语果然有问题——5-8周刊</title>
+    <link href="http://larangekmno4.github.io/2023/10/21/mathstory/"/>
+    <id>http://larangekmno4.github.io/2023/10/21/mathstory/</id>
+    <published>2023-10-21T14:11:26.000Z</published>
+    <updated>2023-10-21T14:13:09.482Z</updated>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="10-16"><a href="#10-16" class="headerlink" title="10.16"></a>10.16</h2><p>今天做数理统计的作业的时候做到一个题目”Likelihood function is a minimal sufficient statistics when parameter space is discrete.”看了好几遍都有点懵，这函数怎么还是统计量了，后来补全了下标之后才搞明白了映射关系，其实本质就是一个partition形成的等价类，而partition其实就是minimal sufficient statistics的本质，这些在高等数理统计的视角下会更加的清楚，学到很多。补全下标在很多领域都是很有助于帮助理解的行为，所以不要懒。</p><p>回宿舍后看了一些徐森林实变函数习题集的题目，感觉可测函数列这一块无非是那么几件事情，一件是给定“容错空间”下的函数拟合（我感觉应该有什么专用术语但这里我就自己命名了），例如Egorov定理，Lusin定理的本质其实都是这样的行为。而这两个定理的证明其实基本上就可以用到所有类似题目的证明当中；一件是依测度收敛的一些 $\varepsilon-\delta-N$ trick，因为依测度收敛其实是有两个 $\varepsilon-N$ 语言的，不同的取法往往会带来不一样的效果，而且有时候要注意其顺序性；另一件就是集合语言的trick，比如说证收敛往往是把一些集合列打包起来取下极限，利用下极限的finite sets don’t satisfy的性质来证明，然后往往在通过de-Morgan定理使坏点的测度跑到0.</p><p>基本都是之前接触过的一些trick，但好久不碰实分析也是忘了不少，吴昊概率论第二章干脆就是随机变量收敛，还是得survey一下，然后再在概率论的语言体系下溜一遍才算安心。当然说是为考试，这些trick和表达的确是非常essential的东西。</p><h2 id="10-17"><a href="#10-17" class="headerlink" title="10.17"></a>10.17</h2><p>今天才想起来写优化理论的HW2，比HW1快一点，ch3那几个课后题纯当练习latex了，ch4后面几道题还是有些东西的，一部分查阅了一些相关的材料。大一的时候还觉得写作业查材料是个很不好的事情，现在感觉只要不是直接搜答案反而是非常有必要的，Yuan Zhou在深度学习理论上也说这个作业你们自己独立完成几乎是个impossible的事情，因为里面很多inequality非常的ad-hoc自己证很难写出来。LP这本书写的是真的详细，比很多大五六百页的书都要详细，因为本质上的确不难但是信息密度实在太大（摘自驰雨老师博客），像其他的应数砖头书还是有些本质繁杂的内容的。基本上感觉如果老师讲课单纯语音转文本是不太可能比这本书更好的，但是课程进度实在是太快，很多内容其实并没有cover，布置的作业里面还有reading的东西，有时候就非常抓狂，像simplex method里面那些改进算法还有column geometry的东西虽然不难但是要自己推一遍还是要花些时间的，尤其是那些矩阵的运算如果不动手写写光看只能走马观花，看了接着就忘，因为自己第一遍就是这么干的。不知道exam会不会包括这些内容，如果真的包括那还是有些恐怖的。</p><p>感觉线性优化主要是接触一下优化的taste和一些基本的idea，类似于线性回归这种，重头戏还是凸优化了。</p><h2 id="10-18"><a href="#10-18" class="headerlink" title="10.18"></a>10.18</h2><p>关于超前学习的一些想法：之前一直都觉得只要自己学得够快就没有人追得上我（当然并不是说没人追得上自己，只是说一个趋势x），但今天突然想讨论一件事情。如果当我真的选了这门课的时候，我的重点就不再是尽快的把这门课覆盖的知识广度掌握，如果真的是那样我完全不需要选课。相反选了的课程恰恰需要慢下来，以课堂进度甚至低于课堂进度的学习节奏去深入的挖掘，比如我这学期选了概率论1，尽管条件概率和鞅我之前就看过，但如果我选了这门课我反而去往前去看Ito定理或者连续鞅之类的东西，那反而没有什么价值，反而应该在LLN，CLT这些地方多停留停留，把更多的时间留在既定范围内技巧和idea的掌握上，加深对这些东西的insight，才是选课这种形式最好的落实方案。这也是为什么我说对数学课而言选课仍然有其不可替代的价值的一个原因。相反，超前学习可能更应该是科研导向或者兴趣导向的，比如我有一个问题用到了超出范围的知识，那顺便学一下是有必要的，或者说我单纯这学期想接触一下拓扑或者泛函，那去学一下也是有必要的，但绝对不是说我选了概1的课去学概2概3的内容，那反而就无聊了。</p><h2 id="10-19"><a href="#10-19" class="headerlink" title="10.19"></a>10.19</h2><ul><li>数学证明当中，一些反常识的不等号方向的证明，往往通过设一个$\varepsilon$，通过证明对任意的$\varepsilon$不等号均严格成立得到的；本质上就是构造一个累次极限并换序。</li></ul>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for</summary>
+    <summary type="html">&lt;h2 id=&quot;10-16&quot;&gt;&lt;a href=&quot;#10-16&quot; class=&quot;headerlink&quot; title=&quot;10.16&quot;&gt;&lt;/a&gt;10.16&lt;/h2&gt;&lt;p&gt;今天做数理统计的作业的时候做到一个题目”Likelihood function is a minimal suffi</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>hello-world</title>
+    <link href="http://larangekmno4.github.io/2023/10/21/world/"/>
+    <id>http://larangekmno4.github.io/2023/10/21/world/</id>
+    <published>2023-10-21T12:55:04.000Z</published>
+    <updated>2023-10-21T13:50:55.439Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to Lagrangekmno4‘s Blog！这是我的第二代公开的个人博客，欢迎您的来访！</p><p>2022年初，由于初入大学的我心里颇不宁静，却因不善言谈而缺乏沟通的契机，我开始使用 hexo 博客在网络上记录一些文字，包括个人的一些想法、学习生活的一些记录，这样的记录一直持续到了现在。但事实上，在 2023 年初，我关停了网站的 github 部署，这是因为如果文字一旦被公开，自己写下的文字便会考虑到读者的因素，很多文字记录的便不是自己最真实的想法；加之当时疫情刚刚结束，我希望我不再依赖网络和文字来记录自己的生活，但事实上并没有改变太多（笑）。前些天在记录时又在想另外一件事情：</p><blockquote><p>所以说自己每次阅读自己写过的东西都会感觉有那么一丝焦虑和压抑，其实无非是留给自己这样一个释放和表达压抑和焦虑的空间，而更多地去做一些自己更能掌控的、乐观的和积极的事情。从这个角度来看，定期写文字的工作也是非常有价值的。只不过可能把这样的交流都通过自己在电脑上敲文字可能会产生一些迭代式的自我批判和剖析，容易产生一些钻牛角尖之类的情况，类似“我想不明白这个，我要想尽一切办法去想明白“很多情况下不如”想不明白就不想了，等一个预期之外的机会来解决这一切“。</p></blockquote><p>在留给自己一个封闭虚拟思想平台的同时同时也要留一个对外的平台，尽管他仍然是虚拟的，但仍然拥有意义，这也是我恢复这个网站的原因之一。当然，也有一些其他值得我重启的理由，比如我能写的东西的类型更多了，无论是数学还是音乐，还是其他的东西，都总要比去年那个只会感叹时运不齐的忧郁记录要好了太多，等等。</p><p>第一代公开的个人博客做到了每天记录，但事实上无非是倒一些焦虑和批判时事的垃圾，现在想来，那些文字无非是排解内心郁闷的借口，不足为外人道也。新版的个人网站则会记录一些“足为外人道也”的内容，如刚才所说，包括数学和音乐的学习记录，以及一些经历与见闻，总之，我希望我能写下一些有趣和有价值的文字，作为虚拟世界里属于自己的对外平台和广播。</p><p>当然，我仍然更希望拥有更多的对外的平台。网站开设了评论区，并且为了降低壁垒，我使用了可以不登录 github 网站的 valine 评论平台，您可以选择性的填写信息。如果您愿意就我网站中的部分内容进行讨论，可以通过预留的邮件来联系我，我大概率会在两小时之内通过邮件或者添加您的联系方式与您取得联系。同时，事实上即使是我“对内”的思想平台也并非完全在本地保存，如果您对此感兴趣，也可以向我索要相关的网址。</p><p>最后，我可能在现实生活中并不是一个健谈的人，但这个网站里的我大概率会很健谈，如果您觉得我还算一个比较有意思的人，也希望您能够常来。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Welcome to Lagrangekmno4‘s Blog！这是我的第二代公开的个人博客，欢迎您的来访！&lt;/p&gt;
+&lt;p&gt;2022年初，由于初入大学的我心里颇不宁静，却因不善言谈而缺乏沟通的契机，我开始使用 hexo 博客在网络上记录一些文字，包括个人的一些想法、学习生活</summary>
       
     
     

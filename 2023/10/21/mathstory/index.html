@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/10 
+      我的青春数学物语果然有问题——5-8周刊 
       
       
       |
@@ -109,41 +109,152 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">我的青春数学物语果然有问题——5-8周刊</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2023-10-21 22:13:09
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <h2 id="10-16"><a href="#10-16" class="headerlink" title="10.16"></a>10.16</h2><p>今天做数理统计的作业的时候做到一个题目”Likelihood function is a minimal sufficient statistics when parameter space is discrete.”看了好几遍都有点懵，这函数怎么还是统计量了，后来补全了下标之后才搞明白了映射关系，其实本质就是一个partition形成的等价类，而partition其实就是minimal sufficient statistics的本质，这些在高等数理统计的视角下会更加的清楚，学到很多。补全下标在很多领域都是很有助于帮助理解的行为，所以不要懒。</p>
+<p>回宿舍后看了一些徐森林实变函数习题集的题目，感觉可测函数列这一块无非是那么几件事情，一件是给定“容错空间”下的函数拟合（我感觉应该有什么专用术语但这里我就自己命名了），例如Egorov定理，Lusin定理的本质其实都是这样的行为。而这两个定理的证明其实基本上就可以用到所有类似题目的证明当中；一件是依测度收敛的一些 $\varepsilon-\delta-N$ trick，因为依测度收敛其实是有两个 $\varepsilon-N$ 语言的，不同的取法往往会带来不一样的效果，而且有时候要注意其顺序性；另一件就是集合语言的trick，比如说证收敛往往是把一些集合列打包起来取下极限，利用下极限的finite sets don’t satisfy的性质来证明，然后往往在通过de-Morgan定理使坏点的测度跑到0.</p>
+<p>基本都是之前接触过的一些trick，但好久不碰实分析也是忘了不少，吴昊概率论第二章干脆就是随机变量收敛，还是得survey一下，然后再在概率论的语言体系下溜一遍才算安心。当然说是为考试，这些trick和表达的确是非常essential的东西。</p>
+<h2 id="10-17"><a href="#10-17" class="headerlink" title="10.17"></a>10.17</h2><p>今天才想起来写优化理论的HW2，比HW1快一点，ch3那几个课后题纯当练习latex了，ch4后面几道题还是有些东西的，一部分查阅了一些相关的材料。大一的时候还觉得写作业查材料是个很不好的事情，现在感觉只要不是直接搜答案反而是非常有必要的，Yuan Zhou在深度学习理论上也说这个作业你们自己独立完成几乎是个impossible的事情，因为里面很多inequality非常的ad-hoc自己证很难写出来。LP这本书写的是真的详细，比很多大五六百页的书都要详细，因为本质上的确不难但是信息密度实在太大（摘自驰雨老师博客），像其他的应数砖头书还是有些本质繁杂的内容的。基本上感觉如果老师讲课单纯语音转文本是不太可能比这本书更好的，但是课程进度实在是太快，很多内容其实并没有cover，布置的作业里面还有reading的东西，有时候就非常抓狂，像simplex method里面那些改进算法还有column geometry的东西虽然不难但是要自己推一遍还是要花些时间的，尤其是那些矩阵的运算如果不动手写写光看只能走马观花，看了接着就忘，因为自己第一遍就是这么干的。不知道exam会不会包括这些内容，如果真的包括那还是有些恐怖的。</p>
+<p>感觉线性优化主要是接触一下优化的taste和一些基本的idea，类似于线性回归这种，重头戏还是凸优化了。</p>
+<h2 id="10-18"><a href="#10-18" class="headerlink" title="10.18"></a>10.18</h2><p>关于超前学习的一些想法：之前一直都觉得只要自己学得够快就没有人追得上我（当然并不是说没人追得上自己，只是说一个趋势x），但今天突然想讨论一件事情。如果当我真的选了这门课的时候，我的重点就不再是尽快的把这门课覆盖的知识广度掌握，如果真的是那样我完全不需要选课。相反选了的课程恰恰需要慢下来，以课堂进度甚至低于课堂进度的学习节奏去深入的挖掘，比如我这学期选了概率论1，尽管条件概率和鞅我之前就看过，但如果我选了这门课我反而去往前去看Ito定理或者连续鞅之类的东西，那反而没有什么价值，反而应该在LLN，CLT这些地方多停留停留，把更多的时间留在既定范围内技巧和idea的掌握上，加深对这些东西的insight，才是选课这种形式最好的落实方案。这也是为什么我说对数学课而言选课仍然有其不可替代的价值的一个原因。相反，超前学习可能更应该是科研导向或者兴趣导向的，比如我有一个问题用到了超出范围的知识，那顺便学一下是有必要的，或者说我单纯这学期想接触一下拓扑或者泛函，那去学一下也是有必要的，但绝对不是说我选了概1的课去学概2概3的内容，那反而就无聊了。</p>
+<h2 id="10-19"><a href="#10-19" class="headerlink" title="10.19"></a>10.19</h2><ul>
+<li>数学证明当中，一些反常识的不等号方向的证明，往往通过设一个$\varepsilon$，通过证明对任意的$\varepsilon$不等号均严格成立得到的；本质上就是构造一个累次极限并换序。</li>
+</ul>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/10/21/world/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2023-10-21 22:13:09
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="我的青春数学物语果然有问题——5-8周刊">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/mathstory/">
-            <span>我的青春数学物语果然有问题——5-8周刊</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="hello-world">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/world/">
-            <span>hello-world</span>
-          </a>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#10-16"><span class="toc-text">10.16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-17"><span class="toc-text">10.17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-18"><span class="toc-text">10.18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-19"><span class="toc-text">10.19</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'KT54T08PQj0P3C1qnUfcBJCR-gzGzoHsz',
+        appKey: 'vzHGva5HtwNi5pMFrfLCvcNv',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -417,6 +528,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%88%91%E7%9A%84%E9%9D%92%E6%98%A5%E6%95%B0%E5%AD%A6%E7%89%A9%E8%AF%AD%E6%9E%9C%E7%84%B6%E6%9C%89%E9%97%AE%E9%A2%98%E2%80%94%E2%80%945-8%E5%91%A8%E5%88%8A + '&url=' + http%3A%2F%2Flarangekmno4.github.io%2F2023%2F10%2F21%2Fmathstory%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://larangekmno4.github.io/2023/10/21/mathstory/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
