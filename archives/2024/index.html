@@ -11,7 +11,7 @@
   
   <title>
     
-      projects 
+      archive_a: 2024 
       
       
       |
@@ -109,123 +109,84 @@
 
 
       <div class="flex-container">
-        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
-<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
+        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
 
+<!-- last: 按年份把文章分组，当前遍历到的年份 -->
+<!-- now: 当前遍历到的文章的发布年份 -->
 
-  <!-- LaTex Display -->
-
-  
-    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-  
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    }
-  </script>
-
-
-
-
-
-  <!-- clipboard -->
-
-  
-    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
-  
-  
-<script src="/js/codeCopy.js"></script>
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
-  <div class="container post-details" id="post-details">
-    <div class="post-content">
-      <div class="post-title">projects</div>
-      <div class="post-attach">
-        <span class="post-pubtime">
-          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2023-10-21 21:59:03
-        </span>
-        
-      </div>
-      <div class="markdown-body">
-        <p>这里会存放一些个人撰写的比较成熟的课程资料、课程笔记、文献综述和一些其他的图文及视频材料。</p>
-<p><del>尽管现在看起来有些空</del></p>
-
-      </div>
-      
-        <div class="prev-or-next">
-          <div class="post-foot-next">
-            
-          </div>
-          <div class="post-attach">
-            <span class="post-pubtime">
-              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2023-10-21 21:59:03
-            </span>
-            
-          </div>
-          <div class="post-foot-prev">
-            
-          </div>
+<div class="container archives">
+  <div class="post-list">
+    
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2024</span>
+          </h2>
         </div>
       
-    </div>
+      <div class="post-item" title="清华园之旅——2024.1">
+        <div class="time-m-d">01-02</div>
+        <div class="title">
+          <a href="/2024/01/02/diary-2024-1/">
+            <span>清华园之旅——2024.1</span>
+          </a>
+        </div>
+      </div>
     
-
+        <!-- 后续文章的发布年份呈现 -->
+        <div class="content-title">
+          <h2>
+            <span>2023</span>
+          </h2>
+        </div>
+      
+      <div class="post-item" title="farewell to 10th, and say hello to 20th">
+        <div class="time-m-d">12-10</div>
+        <div class="title">
+          <a href="/2023/12/10/20%E5%B2%81%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%BF%E6%9C%9B/">
+            <span>farewell to 10th, and say hello to 20th</span>
+          </a>
+        </div>
+      </div>
     
-      <div class="comments-container">
-        
-
-
-
-
-  
-    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
-  
-
-  <div id="vcomments"></div>
-
-  <script>
-    function loadValineSuc() {
-      new Valine({
-        el: '#vcomments',
-        appId: 'KT54T08PQj0P3C1qnUfcBJCR-gzGzoHsz',
-        appKey: 'vzHGva5HtwNi5pMFrfLCvcNv',
-        placeholder: 'Welcome!',
-        avatar: 'retro',
-        lang: 'zh-CN'
-      })
-    }
-  </script>
-
-    <style>
-      .comments-container .v .vempty {
-        display: none!important;
-      }
-    </style>
-
-
-
-
+      <div class="post-item" title="清华园之旅——2023.12">
+        <div class="time-m-d">12-10</div>
+        <div class="title">
+          <a href="/2023/12/10/diary-12/">
+            <span>清华园之旅——2023.12</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="期中考试周后的一些想法">
+        <div class="time-m-d">11-18</div>
+        <div class="title">
+          <a href="/2023/11/18/talking-202311/">
+            <span>期中考试周后的一些想法</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="近日杂谈">
+        <div class="time-m-d">10-29</div>
+        <div class="title">
+          <a href="/2023/10/29/talking/">
+            <span>近日杂谈</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="post-item" title="hello-world">
+        <div class="time-m-d">10-21</div>
+        <div class="title">
+          <a href="/2023/10/21/world/">
+            <span>hello-world</span>
+          </a>
+        </div>
       </div>
     
   </div>
-
+</div>
 
         
 <div class="footer">
@@ -499,24 +460,6 @@
 
 
         
-  
-    <div class="share-icon tools-bar-item">
-      <a href="javascript: void(0)" id="share-icon">
-        <i class="iconfont iconshare"></i>
-      </a>
-      <div class="share-content hidden">
-        
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + projects + '&url=' + http%3A%2F%2Flarangekmno4.github.io%2Fprojects%2Findex.html + '" target="_blank" title="Twitter">
-            <i class="iconfont icon-twitter"></i>
-          </a>
-        
-        
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://larangekmno4.github.io/projects/index.html" target="_blank" title="Facebook">
-            <i class="iconfont icon-facebooksquare"></i>
-          </a>
-        
-      </div>
-    </div>
   
   
 <script src="/js/shares.js"></script>
