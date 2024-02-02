@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2024 
+      diary-2024-2 
       
       
       |
@@ -109,93 +109,147 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">diary-2024-2</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2024-02-03 00:59:55
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <p>感觉还是有必要每天水一水（，一月日记彻底高质量<del>似乎也并没有高质量</del>化了。</p>
+<h2 id="2-2"><a href="#2-2" class="headerlink" title="2.2"></a>2.2</h2><p>开奖了，这个非线性规划确实是有点幽默了，喜提2学分B+，本来是能创造4.00奇迹的（，以后就和工工的本科生课掰掰了（。其他都还好，虽然确实是A-批发商了但总体问题不大，虽然没有A+<del>还是让人黯然神伤</del>。</p>
+<p>4门求真的课（草原来选了这么多求真课）最后都给够了面子，应A尽A，考得稀烂的概1也捞上了A-，虽然说概率论拿A-确实是有点那个，如果有时间的话补个数学系概率论2水个A，虽然都大三的老登了按理来说不应再拿着A后面的符号说事（。然而下学期不知道又要怎么选课，大水漫灌的心思又涌上来了，<del>这非常不好兄弟</del>。泛函想了许久还是认为没必要为难自己，本来实分析就有的卷了，留给大三上卷泛函。所以数学系这边就打算PDE和数学规划二选一了，如果ywa给手选就PDE，不给就数学规划。除此之外还有一个计算金融学和求真的计算概率，这俩看情况再说，其他乱七八糟的系的课哥们是一个都不选了，除非是ypk高维这种货真价实的数学课（</p>
+<p>这几天一直在学RL的基础知识，非常养老，学完之后打算跑点代码上手。数学随缘看了看高维和复分析，但是online leaning完全没看，不知道怎么去找周源聊，总不能真在组合优化上学吧急急急（。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/01/02/diary-2024-1/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2024-02-03 00:59:55
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="diary-2024-2">
-        <div class="time-m-d">02-03</div>
-        <div class="title">
-          <a href="/2024/02/03/diary-2024-2/">
-            <span>diary-2024-2</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="清华园之旅——2024.1">
-        <div class="time-m-d">01-02</div>
-        <div class="title">
-          <a href="/2024/01/02/diary-2024-1/">
-            <span>清华园之旅——2024.1</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="farewell to 10th, and say hello to 20th">
-        <div class="time-m-d">12-10</div>
-        <div class="title">
-          <a href="/2023/12/10/20%E5%B2%81%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%BF%E6%9C%9B/">
-            <span>farewell to 10th, and say hello to 20th</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2-2"><span class="toc-text">2.2</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="清华园之旅——2023.12">
-        <div class="time-m-d">12-10</div>
-        <div class="title">
-          <a href="/2023/12/10/diary-12/">
-            <span>清华园之旅——2023.12</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="期中考试周后的一些想法">
-        <div class="time-m-d">11-18</div>
-        <div class="title">
-          <a href="/2023/11/18/talking-202311/">
-            <span>期中考试周后的一些想法</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="近日杂谈">
-        <div class="time-m-d">10-29</div>
-        <div class="title">
-          <a href="/2023/10/29/talking/">
-            <span>近日杂谈</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="hello-world">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/world/">
-            <span>hello-world</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'KT54T08PQj0P3C1qnUfcBJCR-gzGzoHsz',
+        appKey: 'vzHGva5HtwNi5pMFrfLCvcNv',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -469,6 +523,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + diary-2024-2 + '&url=' + http%3A%2F%2Flarangekmno4.github.io%2F2024%2F02%2F03%2Fdiary-2024-2%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://larangekmno4.github.io/2024/02/03/diary-2024-2/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
