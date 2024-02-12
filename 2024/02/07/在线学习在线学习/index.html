@@ -158,7 +158,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2024-02-08 00:10:09
+          2024-02-12 19:51:52
         </span>
         
       </div>
@@ -167,14 +167,14 @@
 <p>如果下学期周源收我进组的话，为了不让一开始需要补的坑过于庞大，打算自己寒假补一下online learning和bandits theory的东西，剩下的边研究边补。<a target="_blank" rel="noopener" href="https://www.nowpublishers.com/MAL">Foundations and Trends in Machine Learning</a> 里面正好有一份online learning的<a target="_blank" rel="noopener" href="https://www.cs.huji.ac.il/~shais/papers/OLsurvey.pdf">survey</a>，篇幅也不是很多，打算过年这几天拿这个速通一下，然后再把<del>土匪</del>bandits看一下就够了。</p>
 <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>在线学习(online learning)是指再一个连续的回合中，学习者(learner)在第 $t$ 回合接受在事件集合 $\cal{X}$ 中的问题 $x_t$ ，并给出回答(answer) $p_t\in D$ ，在进行回答之后，会和正确答案 $y_t\in\cal{Y}$ 进行比较，并造成损失 $l(p_t,y_t)$ .学习者的最终目的是最小化累积损失(cumulative loss)，这与普通的offline learning的区别在于，学习的过程是动态的. 其中，$x_t$ 和 $y_t$ 的序列可以是确定的、随机的、甚至是对抗性的(adversarially). </p>
 <p>例子：(prediction with expert advice)在每一回合中，学习者需要从 $d$ 名给定专家的建议中选择一名，从而 $x_t\in\mathcal X\subset \mathbb R^d$，其中 $x_t[i]$ 是第 $i$ 名专家的建议，且预测集 $D&#x3D;[d]$，学习者在进行选择后收到回答 $y_t\in\mathcal Y&#x3D;[0,1]^d$ ，其中 $y_t[i]$ 是选择第 $i$ 名专家的代价，从而 $\ell(p_t,y_t)&#x3D;y_t[p_t]$. 一般来说，假设集常常设定为 $\mathcal{H}&#x3D;{h_1,\ldots,h_d}$，其中 $h_i(x)&#x3D;i$，也即无论输入 $x$ 是什么都采取相同专家的建议。</p>
-<p>我们给出这样的限制：给定 predictor 集合 $\mathcal H$，并要求学习者必尽可能超过其中最好的 predictor。度量的标准称为该算法的遗憾值(regret)，其中，截止到 $T$ 回合相对 $h^\star$ 的遗憾值定义为<br>$$<br>\text{Regret}<em>T(h^\star)&#x3D;\sum</em>{t&#x3D;1}^T \ell(p_t,y_t)-\sum_{t&#x3D;1}^T\ell(h^\star(x_t),y_t)<br>$$<br>而相对于假设集 $\cal{H}$ 的遗憾值定义为<br>$$<br>\text{Regret}<em>T(\mathcal H)&#x3D;\max</em>{h^\star\in\mathcal H}\text{Regret}_T(h^\star)<br>$$<br>学习者的目标则为最小化相对于 $\mathcal H$ 的遗憾值.</p>
-<p>我们先证明为什么在没有限制的情况下，在线优化算法是没有优化能力的：考虑01分类问题，如果假设集有限，考虑遗憾值<br>$$<br>\text{Regret}<em>T(\mathcal H)&#x3D;\max</em>{h\in\mathcal H}\Big(\sum_{t&#x3D;1}^T|p_t-y_t|-\sum_{t&#x3D;1}^T|h(x_t)-y_t| \Big)<br>$$<br>可以证明，即使在假设集只有 $\mathcal{H}&#x3D;{h_0,h_1}$ 的情况下，遗憾值也是达不到 sublinear bound 的，这是因为：一个 adversary 可以让错误次数等于 $T$，从而 $h_0$ 和 $h_1$ 总有一个能让遗憾值不小于 $T&#x2F;2$ . 该结果称为 Cover’s impossibility result.</p>
+<p>我们给出这样的限制：给定 predictor 集合 $\mathcal H$，并要求学习者必尽可能超过其中最好的 predictor。度量的标准称为该算法的遗憾值(regret)，其中，截止到 $T$ 回合相对 $h^\star$ 的遗憾值定义为<br>$$<br>\mathrm{Regret}^T(h^\star)&#x3D;\sum_{t&#x3D;1}^T \ell(p_t,y_t)-\sum_{t&#x3D;1}^T\ell(h^\star(x_t),y_t)<br>$$<br>而相对于假设集 $\cal{H}$ 的遗憾值定义为<br>$$<br>\mathrm{Regret}^T(\mathcal H)&#x3D;\max_{h^\star\in\mathcal H}\mathrm{Regret}^T(h^\star)<br>$$<br>学习者的目标则为最小化相对于 $\mathcal H$ 的遗憾值.</p>
+<p>我们先证明为什么在没有限制的情况下，在线优化算法是没有优化能力的：考虑01分类问题，如果假设集有限，考虑遗憾值<br>$$<br>\mathrm{Regret}^T(\mathcal{H})&#x3D;\max_{h\in\mathcal H}\Big(\sum_{t&#x3D;1}^T|p_t-y_t|-\sum_{t&#x3D;1}^T|h(x_t)-y_t| \Big)<br>$$<br>可以证明，即使在假设集只有 $\mathcal{H}&#x3D;{h_0,h_1}$ 的情况下，遗憾值也是达不到 sublinear bound 的，这是因为：一个 adversary 可以让错误次数等于 $T$，从而 $h_0$ 和 $h_1$ 总有一个能让遗憾值不小于 $T&#x2F;2$ . 该结果称为 Cover’s impossibility result.</p>
 <p>这样的结果是因为 adversarial environment <del>不讲武德</del> ，事实上现实中的优化问题没那么逆天以至于一定会反馈给你相反的答案，所以这时候可以引入一些假设来限制 adversary 的能力：</p>
 <ul>
 <li><p>假设回答的生成模式是固定的，也即 $h^\star\in\mathcal H$, $y_t&#x3D;h^\star(x_t)$，我们将设计一个算法使得 $M_A(\mathcal H)$ 尽可能小，一个自然的想法是选择与之前回合相一致的假设，例如输入 $(x_1, 0),(x_2,1),(x_3,0)$,则在假设集中自动保留相符合的假设.</p>
-<p>那么在 consistent 算法执行过程中，假设 $V_t$ 是当前的假设集，那么随着执行过程假设集会随着错误的产生而不断缩小，从而当发生 $M$ 次错误后， $|V_t|\leq |\mathcal H|-M$，因为 $V_t$ 一定非空（因为 $h^\star\in\mathcal H$，所以 $1\leq|V_t|\leq |\mathcal H|-M$.</p>
+<p>那么在 <code>consistent</code> 算法执行过程中，假设 $V_t$ 是当前的假设集，那么随着执行过程假设集会随着错误的产生而不断缩小，从而当发生 $M$ 次错误后， $|V_t|\leq |\mathcal H|-M$，因为 $V_t$ 一定非空（因为 $h^\star\in\mathcal H$，所以 $1\leq|V_t|\leq |\mathcal H|-M$.</p>
+<p>事实上我们有更好的算法，也即选择 $V_t$ 中更多的算法（<code>halves</code>算法），而非始终按照某一算法 $h\in V_t$ 去进行，因此如果我们犯错，我们可以最多移去一半的算法。此时我们有 $M(\mathcal H)\leq \log_2(|\mathcal {H}|)$.</p>
 </li>
-<li></li>
 </ul>
 
       </div>
@@ -191,7 +191,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2024-02-08 00:10:09
+              2024-02-12 19:51:52
             </span>
             
           </div>
