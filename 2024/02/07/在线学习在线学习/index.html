@@ -158,7 +158,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-          2024-03-02 13:35:28
+          2024-03-03 15:44:04
         </span>
         
       </div>
@@ -184,8 +184,13 @@
 </blockquote>
 <p>和一般凸优化的区别除了最明显的，优化过程也就是 $\mathbf w_t$ 是动态的之外；还有一点是损失函数是 adversarial 的，这一点在前面的篇幅中也提到了，直观上来讲是，我们需要得到其在最坏的情况下的表现效果。</p>
 <p>对在线凸优化而言，其“正确答案”和一般的优化是一样的，都是一个确定的向量 $\bf{u}$，所以遗憾值被定义为<br>$$<br>\mathrm{Regre}\text t_T({\bf u})&#x3D;\sum_{t&#x3D;1}^T f_t(w_t)-\sum_{t&#x3D;1}^T f_t({\bf u}).<br>$$<br>这里的遗憾值对于所有的 ${\bf u}\in S$ 都是可以定义的，而我们关注的是最优的 $\bf u$，所以我们可以定义对于竞争集 $U$ 上的遗憾值也就是<br>$$<br>\mathrm{Regre}\text t_T(U)&#x3D;\max_{\mathbf u\in U}\mathrm{Regre}\text t_T(\bf u).<br>$$<br>例：如在线线性回归问题，每一回合学习者接收到一个特征向量（此特征向量是feature不是eigen（x）$\mathbf x_t\in A \subset \mathbb R^d$ ，在给出回归结果 $p_t$ 后将与正确答案 $y_t$ 比对，并获得损失 $|p_t-y_t|$（从这里我们也可以看到一点，在线凸优化是有明确的顺序的，也即总是先做题后给答案，这和正常的给一堆问题和答案的离线优化是不同的），而比对对象即所有的线性函数 $\langle \mathbf w,\mathbf x\rangle$.</p>
-<p>如何解决在线凸优化问题呢？最基本的想法就是用贪心思想在每一步达到最优，其实本质上就是 <code>consistent</code> 算法。我们不知道这一轮的损失函数是什么，所以我们只能在 $t-1$ 回合的信息下作决策，即 Follow-The-Leader(FTL) 算法：<br>$$<br>\forall t, {\bf w_t}&#x3D;\underset{\mathbf w\in S}{\arg\min}\sum_{i&#x3D;1}^{t-1}f_i(\mathbf w).<br>$$<br>下面分析其遗憾值上界，我们先证明一个不等式：<br>$$<br>\mathrm{Regre}\text t_T(\mathbf u)&#x3D;\sum_{t&#x3D;1}^T(f_t(\mathbf w_t)-f_t(\mathbf u))\leq\sum_{t&#x3D;1}^T(f_t(\mathbf w_t)-f_t(\mathbf w_{t+1})).<br>$$<br>可以通过归纳证明，这是因为 $\mathbf w_{t+1}$ 已经是局部上使得 $f_1({\bf u}),\ldots, f_t({\bf u})$ 最小的，所以一定比拍脑袋选一个 $\bf u$ 要好.</p>
-<p>例：在线二次优化，其中损失函数 $f_t(\mathbf w)&#x3D;\frac{1}{2}|\mathbf w-\mathbf z_t|^2$ ，直观上来看就是尽可能找到数据的中心，根据 FTL 算法， $\mathbf w_t&#x3D;\frac{1}{t-1}\sum_{i&#x3D;1}^{t-1}\mathbf z_i$ ，那么根据递推有<br>$$<br>\mathbf w_{t+1}&#x3D;(1-\frac{1}{t})\mathbf w_t+\frac{1}{t}\mathbf z_t.<br>$$<br>从而<br>$$<br>\begin{aligned}<br>f_t(w_t)-f_t(w_{t+1})&amp;&#x3D;\frac{1}{2}|w_t-z_t|^2-\frac{1}{2}|w_{t+1}^2-z_t|^2\<br>&amp;&#x3D;\frac{1}{2}(1-(1-\frac{1}{t}^2))|w_t-z_t|^2\<br>&amp;\leq \frac{1}{t}|w_t-z_t|^2.<br>\end{aligned}<br>$$<br>假设诸 $z_t$ 在 $\mathbb B(0,L)$ 内，那么有<br>$$<br>\sum_{t&#x3D;1}^T(f_t(\mathbf w_t))-f_t(\mathbf w_{t+1}))\leq (2L)^2\sum_{t&#x3D;1}^T \frac{1}{t}&#x3D;\mathcal{O}(L^2\log(T)).<br>$$<br>FTL 算法未必一定奏效，因为其完全通过前 $t-1$ 次的损失函数最小化得到，如果第 $t$ 次的损失函数完全改变了之前的格局，将导致 $\mathbf w_t$ 剧烈震荡，无法得到 sublinear 的遗憾值，为了避免这种情况，一般会引入</p>
+<p>如何解决在线凸优化问题呢？最基本的想法就是用贪心思想在每一步达到最优，其实本质上就是 <code>consistent</code> 算法。我们不知道这一轮的损失函数是什么，所以我们只能在 $t-1$ 回合的信息下作决策，即 Follow-The-Leader(FTL) 算法：<br>$$<br>\forall t, {\bf w_t}&#x3D;\underset{\mathbf w\in S}{\arg\min}\sum_{i&#x3D;1}^{t-1}f_i(\mathbf w).<br>$$<br>下面分析其遗憾值上界，我们先证明一个不等式：<br>$$<br>\mathrm{Regre}\text t_T(\mathbf u)&#x3D;\sum_{t&#x3D;1}^T(f_t(\mathbf w_t)-f_t(\mathbf u))\leq\sum_{t&#x3D;1}^T(f_t(\mathbf w_t)-f_t(\mathbf w_{t+1})).\tag{1.1}<br>$$<br>可以通过归纳证明，这是因为 $\mathbf w_{t+1}$ 已经是局部上使得 $f_1({\bf u}),\ldots, f_t({\bf u})$ 最小的，所以一定比拍脑袋选一个 $\bf u$ 要好.</p>
+<p>例：在线二次优化，其中损失函数 $f_t(\mathbf w)&#x3D;\frac{1}{2}|\mathbf w-\mathbf z_t|^2$ ，直观上来看就是尽可能找到数据的中心，根据 FTL 算法， $\mathbf w_t&#x3D;\frac{1}{t-1}\sum_{i&#x3D;1}^{t-1}\mathbf z_i$ ，那么根据递推有<br>$$<br>\mathbf w_{t+1}&#x3D;(1-\frac{1}{t})\mathbf w_t+\frac{1}{t}\mathbf z_t.<br>$$<br>从而<br>$$<br>\begin{aligned}<br>f_t(w_t)-f_t(w_{t+1})&amp;&#x3D;\frac{1}{2}|w_t-z_t|^2-\frac{1}{2}|w_{t+1}^2-z_t|^2\<br>&amp;&#x3D;\frac{1}{2}(1-(1-\frac{1}{t}^2))|w_t-z_t|^2\<br>&amp;\leq \frac{1}{t}|w_t-z_t|^2.<br>\end{aligned}<br>$$<br>假设诸 $z_t$ 在 $\mathbb B(0,L)$ 内，那么有<br>$$<br>\sum_{t&#x3D;1}^T(f_t(\mathbf w_t))-f_t(\mathbf w_{t+1}))\leq (2L)^2\sum_{t&#x3D;1}^T \frac{1}{t}&#x3D;\mathcal{O}(L^2\log(T)).<br>$$<br>FTL 算法未必一定奏效，因为其完全通过前 $t-1$ 次的损失函数最小化得到，如果第 $t$ 次的损失函数完全改变了之前的格局，将导致 $\mathbf w_t$ 剧烈震荡，无法得到 sublinear 的遗憾值，为了避免这种情况，一般会引入 regularization。</p>
+<p> 首先给出一个 FTL 算法失效的反例：</p>
+<p>考虑预测集 $S&#x3D;[-1,1]\subset \mathbb R$，并考虑损失函数 $f_t(w)&#x3D;z_tw$ ，其中<br>$$<br>\begin{equation}<br>z_t&#x3D;\left{<br>\begin{aligned}<br>-0.5&amp;\quad \text{if}<del>t&#x3D;1\<br>1 &amp;\quad \text{if}</del>t<del>\text{is even}\<br>-1 &amp; \quad \text{if}</del>t&gt;1\and t\text{is odd}.<br>\end{aligned}<br>\right.<br>\end{equation}<br>$$<br>这时候，如果选择 $u&#x3D;0$ 作为目标向量，则累计损失为 $0$，但如果按照 FTL 算法，因为其无法考虑到本次的损失函数，所以每回合都会带来 $1$ 的损失。</p>
+<p>Follow-The-Regularied-Leader类似于LASSO的思想，后面加一个正则项来保证预测结果在一个相对稳定的范围内，即<br>$$<br>\forall t,\quad w_t&#x3D;\underset{w\in S}{\arg\min}\sum_{i&#x3D;1}^{t-1}f_i(w)+R(w).<br>$$<br>下面分析 FTRL 算法的遗憾值，类似 FTL 算法，如果将 $R(w)$ 视为 $f_0$ ，那么类似(1.1)可得<br>$$<br>\sum_{t&#x3D;1}^T(f_t(w_t)-f_t(u))\leq R(u)-R(w_1)+\sum_{t&#x3D;1}^T(f_t(w_t)-f_t(w_{t+1})).<br>$$<br>下面分析 $R(w)&#x3D;\frac{1}{2\eta}|w|<em>2^2$  、$f_t(w)&#x3D;\langle w,z_t\rangle$ 时的遗憾值，有<br>$$<br>\begin{aligned}<br>\text{Regre}\text t_T(u)&amp;\leq R(u)-R(w_1)+\sum</em>{t&#x3D;1}^T(f_t(w_t)-f_t(w_{t+1}))\<br>&amp;\leq \frac{1}{2\eta}|u|<em>2^2+\sum</em>{t&#x3D;1}^T\langle w_t-w_{t+1},z_t\rangle \<br>&amp;&#x3D;\frac{1}{2\eta}|u|<em>2^2+\eta\sum</em>{t&#x3D;1}^T|z_t|<em>2^2.<br>\end{aligned}<br>$$<br>其中，根据简单的计算可以得到 $w</em>{t+1}&#x3D;-\eta\sum_{i&#x3D;1}^t z_i&#x3D;w_t-\eta z_t$ ，这个更新规则恰好就是类似于梯度下降法，事实上也的确如此，当 $w$ 与 $z_t$ 反方向时损失函数达到最小，此时恰好就是梯度的反方向！</p>
+<p>如果控制 $u$ 的半径为 $B$，$z_t$ 即梯度小于 $L$ 即 Lipschitz，那么通过设定参数 $\eta&#x3D;\frac{B}{L\sqrt{2T}}$ 可以得到遗憾值小于 $BL\sqrt{2T}$，但这里问题在于， $T$ 可能并不是已知的，所以参数的设置取决于回合数，这并不是我们想要的。如何在回合数未知的情况下达到 $\mathcal{O}(\sqrt T)$ 的遗憾值呢？最简单的方法就是分段，例如第 $2^n$ 到 $2^{n+1}$ 回合利用 $\eta&#x3D;\frac{B}{L\sqrt{2^{n+1}}}$ 作为参数，最后也能够达到 $\mathcal{O}(\sqrt{T})$ 的遗憾值。</p>
+<p>下面来讲在线梯度下降(OGD)，本质思想就是把凸函数转化为线性函数，再按照上面的思想进行。假设 $f_t$ 为凸函数，那么存在 $z_t$ 使得<br>$$<br>f_t(w_t)-f_t(u)\leq\langle w_t-u,z_t\rangle.<br>$$</p>
 
       </div>
       
@@ -201,7 +206,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
-              2024-03-02 13:35:28
+              2024-03-03 15:44:04
             </span>
             
           </div>
