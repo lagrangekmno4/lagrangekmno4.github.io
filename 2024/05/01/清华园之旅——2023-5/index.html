@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2024/4 
+      清华园之旅——2023.5 
       
       
       |
@@ -109,129 +109,145 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2024</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">清华园之旅——2023.5</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+          2024-05-01 00:53:14
+        </span>
+        
+      </div>
+      <div class="markdown-body">
+        <h1 id="5-1"><a href="#5-1" class="headerlink" title="5.1"></a>5.1</h1><p>明天就回北京了，感觉在家里休养生息的不错。</p>
+<p>严格来讲已经是最好的一学期了，只是因为前段时间的申必事故搞得上个月是有点debuff在里面的（。只能说过去的都过去了（似乎也没什么过去的），尽量往前看吧（，某种程度上也说明了自己在改变了。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2024/04/07/diary-2024-4/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>上一页</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="更新时间"></i>
+              2024-05-01 00:53:14
+            </span>
+            
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="清华园之旅——2023.5">
-        <div class="time-m-d">05-01</div>
-        <div class="title">
-          <a href="/2024/05/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-5/">
-            <span>清华园之旅——2023.5</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="清华园之旅——2024.4">
-        <div class="time-m-d">04-07</div>
-        <div class="title">
-          <a href="/2024/04/07/diary-2024-4/">
-            <span>清华园之旅——2024.4</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="清华园之旅——2024.3">
-        <div class="time-m-d">03-02</div>
-        <div class="title">
-          <a href="/2024/03/02/diary-2024-3/">
-            <span>清华园之旅——2024.3</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="在线学习在线学习">
-        <div class="time-m-d">02-07</div>
-        <div class="title">
-          <a href="/2024/02/07/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0/">
-            <span>在线学习在线学习</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="清华园之旅——2024.2">
-        <div class="time-m-d">02-03</div>
-        <div class="title">
-          <a href="/2024/02/03/diary-2024-2/">
-            <span>清华园之旅——2024.2</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="清华园之旅——2024.1">
-        <div class="time-m-d">01-02</div>
-        <div class="title">
-          <a href="/2024/01/02/diary-2024-1/">
-            <span>清华园之旅——2024.1</span>
-          </a>
-        </div>
-      </div>
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
-        </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">目录</div>
+    <div class="catalog-content">
       
-      <div class="post-item" title="farewell to 10th, and say hello to 20th">
-        <div class="time-m-d">12-10</div>
-        <div class="title">
-          <a href="/2023/12/10/20%E5%B2%81%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%BF%E6%9C%9B/">
-            <span>farewell to 10th, and say hello to 20th</span>
-          </a>
-        </div>
-      </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#5-1"><span class="toc-text">5.1</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="清华园之旅——2023.12">
-        <div class="time-m-d">12-10</div>
-        <div class="title">
-          <a href="/2023/12/10/diary-12/">
-            <span>清华园之旅——2023.12</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="期中考试周后的一些想法">
-        <div class="time-m-d">11-18</div>
-        <div class="title">
-          <a href="/2023/11/18/talking-202311/">
-            <span>期中考试周后的一些想法</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="近日杂谈">
-        <div class="time-m-d">10-29</div>
-        <div class="title">
-          <a href="/2023/10/29/talking/">
-            <span>近日杂谈</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="hello-world">
-        <div class="time-m-d">10-21</div>
-        <div class="title">
-          <a href="/2023/10/21/world/">
-            <span>hello-world</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+  
+    <script async type="text/javascript" src="/plugins/valine.min.js" onload="loadValineSuc(this)"></script>
+  
+
+  <div id="vcomments"></div>
+
+  <script>
+    function loadValineSuc() {
+      new Valine({
+        el: '#vcomments',
+        appId: 'KT54T08PQj0P3C1qnUfcBJCR-gzGzoHsz',
+        appKey: 'vzHGva5HtwNi5pMFrfLCvcNv',
+        placeholder: 'Welcome!',
+        avatar: 'retro',
+        lang: 'zh-CN'
+      })
+    }
+  </script>
+
+    <style>
+      .comments-container .v .vempty {
+        display: none!important;
+      }
+    </style>
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -505,6 +521,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + %E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023.5 + '&url=' + http%3A%2F%2Flarangekmno4.github.io%2F2024%2F05%2F01%2F%25E6%25B8%2585%25E5%258D%258E%25E5%259B%25AD%25E4%25B9%258B%25E6%2597%2585%25E2%2580%2594%25E2%2580%25942023-5%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://larangekmno4.github.io/2024/05/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-5/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
