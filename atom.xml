@@ -6,7 +6,7 @@
   <link href="http://larangekmno4.github.io/atom.xml" rel="self"/>
   
   <link href="http://larangekmno4.github.io/"/>
-  <updated>2024-07-03T15:25:05.137Z</updated>
+  <updated>2024-07-04T16:23:23.762Z</updated>
   <id>http://larangekmno4.github.io/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://larangekmno4.github.io/2024/07/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-7/"/>
     <id>http://larangekmno4.github.io/2024/07/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-7/</id>
     <published>2024-07-01T15:34:36.000Z</published>
-    <updated>2024-07-03T15:25:05.137Z</updated>
+    <updated>2024-07-04T16:23:23.762Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="7-1"><a href="#7-1" class="headerlink" title="7.1"></a>7.1</h1><p>七月的第一天从起床吃午饭开始（</p><p>跟Yunzong Xu进行了第二次meeting，终于说中文了，好好好（。老师是四字班的，其实从年龄上来看也就比我大七八岁的样子，相对而言也很好说话，能套到还是血赚的。给了我一篇econ的文章，大概是一篇关于certification下的购买关系优化的一篇文章，econ的文章确实读起来对语言上的要求比数学和cs多很多，有很多<del>高级词汇</del>需要查一下google，提醒我该准备一下托福了。但是数学模型很简单优雅，相比于learning theory的暴力美学还是好看不少。</p><h1 id="7-3"><a href="#7-3" class="headerlink" title="7.3"></a>7.3</h1><p>无聊（</p><p>6号回北京，把宿舍的事情安顿好应该就可以开启在学校的度假生活了。现在相当于是Rui Gao和Yunzong Xu两个老师双线程了，Yining Wang和周源明显是没太有想hands-on的想法，就先搁置下来了，目前最好的结果是在明年3月之前两边至少有一个能有纸面上的初步成果，而且两个都没有直接烂尾，然后用这个初步成果和两段科研经历去套target school的线下暑研。而可以预见的是，如果真的打算好好处理这一段双线程的话，下一学年的课表势必要做的稀疏一点，尤其是春季学期更是如此，毕竟春季学期普遍成绩要略烂一些（？。两位老师都非常hands-on，Yunzong甚至直接定了weekly的meeting，而且在主观能动性的同时给了一些明确的任务虽然这些任务看起来像课程作业（，但总之比之前几次不是很成功的求师尝试强太多了。回学校后每天看看paper学学数学和英语练练琴，再适当添加一些现充活动（真的能有吗），差不多就是从现在到八月底的生活状态了，数学壬的生活终究还是简单.jpg</p><p>Optimal Quality Certification已经看的差不多了，这篇因为本来就是econ的文章数学确实很简单，无非是一个故事罢了，导师应该是想让我搞一个英文的presentation讲一下这篇paper，然后让我试着提几个idea，其实这篇文章大概就是给了一个品质（影响购买）和成本的 trade-off，但有一个问题是，成本和品质的关系是stochastic的，而购买者对品质的把控是通过regulator的certification得到的，而这个certification其实是对品质的一个partition，而optimization的本质是买方和卖方的一个game，而regulator则可以起到优化一个类似nash点的一个作用。所以如果能给idea的话，trivial的一些想法是首先这个成本和品质的关系可以设为未知的，然后用bandits去学（被周源的paper同化了x），还有一些可能能从gaming theory的角度去想一些更具体的设定。这个再根据他提供的reference想想吧，下一次的meeting是12号，但以后就是一周一次了。</p><p>最近钢琴在练秒五的ed <em>one more time, one more chance</em> <del>因为这个确实比较好练</del>，因为哥们还确实一直没看过秒五昨天晚上睡不着看了看，结果看完了一头雾水遗憾离场，是哥们经验太浅了吗（？</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="7-1"><a href="#7-1" class="headerlink" title="7.1"></a>7.1</h1><p>七月的第一天从起床吃午饭开始（</p><p>跟Yunzong Xu进行了第二次meeting，终于说中文了，好好好（。老师是四字班的，其实从年龄上来看也就比我大七八岁的样子，相对而言也很好说话，能套到还是血赚的。给了我一篇econ的文章，大概是一篇关于certification下的购买关系优化的一篇文章，econ的文章确实读起来对语言上的要求比数学和cs多很多，有很多<del>高级词汇</del>需要查一下google，提醒我该准备一下托福了。但是数学模型很简单优雅，相比于learning theory的暴力美学还是好看不少。</p><h1 id="7-3"><a href="#7-3" class="headerlink" title="7.3"></a>7.3</h1><p>无聊（</p><p>6号回北京，把宿舍的事情安顿好应该就可以开启在学校的度假生活了。现在相当于是Rui Gao和Yunzong Xu两个老师双线程了，Yining Wang和周源明显是没太有想hands-on的想法，就先搁置下来了，目前最好的结果是在明年3月之前两边至少有一个能有纸面上的初步成果，而且两个都没有直接烂尾，然后用这个初步成果和两段科研经历去套target school的线下暑研。而可以预见的是，如果真的打算好好处理这一段双线程的话，下一学年的课表势必要做的稀疏一点，尤其是春季学期更是如此，毕竟春季学期普遍成绩要略烂一些（？。两位老师都非常hands-on，Yunzong甚至直接定了weekly的meeting，而且在主观能动性的同时给了一些明确的任务虽然这些任务看起来像课程作业（，但总之比之前几次不是很成功的求师尝试强太多了。回学校后每天看看paper学学数学和英语练练琴，再适当添加一些现充活动（真的能有吗），差不多就是从现在到八月底的生活状态了，数学壬的生活终究还是简单.jpg</p><p>Optimal Quality Certification已经看的差不多了，这篇因为本来就是econ的文章数学确实很简单，无非是一个故事罢了，导师应该是想让我搞一个英文的presentation讲一下这篇paper，然后让我试着提几个idea，其实这篇文章大概就是给了一个品质（影响购买）和成本的 trade-off，但有一个问题是，成本和品质的关系是stochastic的，而购买者对品质的把控是通过regulator的certification得到的，而这个certification其实是对品质的一个partition，而optimization的本质是买方和卖方的一个game，而regulator则可以起到优化一个类似nash点的一个作用。所以如果能给idea的话，trivial的一些想法是首先这个成本和品质的关系可以设为未知的，然后用bandits去学（被周源的paper同化了x），还有一些可能能从gaming theory的角度去想一些更具体的设定。这个再根据他提供的reference想想吧，下一次的meeting是12号，但以后就是一周一次了。</p><p>最近钢琴在练秒五的ed <em>one more time, one more chance</em> <del>因为这个确实比较好练</del>，因为哥们还确实一直没看过秒五昨天晚上睡不着看了看，结果看完了一头雾水遗憾离场，是哥们经验太浅了吗（？</p><h1 id="7-4"><a href="#7-4" class="headerlink" title="7.4"></a>7.4</h1><p>无聊（</p><p>随便看了看paper做了做托福，快要回北京了，睡会觉了（</p>]]></content>
     
     
       
