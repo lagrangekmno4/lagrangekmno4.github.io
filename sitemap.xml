@@ -4,7 +4,7 @@
   <url>
     <loc>http://larangekmno4.github.io/2024/07/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-7/</loc>
     
-    <lastmod>2024-07-10</lastmod>
+    <lastmod>2024-07-12</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/05/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-5/</loc>
+    <loc>http://larangekmno4.github.io/page/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942023-5.html</loc>
     
     <lastmod>2024-05-31</lastmod>
     
@@ -29,16 +29,16 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/04/07/diary-2024-4/</loc>
+    <loc>http://larangekmno4.github.io/page/diary-2024-4.html</loc>
     
-    <lastmod>2024-04-27</lastmod>
+    <lastmod>2024-04-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/03/02/diary-2024-3/</loc>
+    <loc>http://larangekmno4.github.io/page/diary-2024-3.html</loc>
     
     <lastmod>2024-03-28</lastmod>
     
@@ -56,7 +56,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/02/07/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>http://larangekmno4.github.io/page/%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0%E5%9C%A8%E7%BA%BF%E5%AD%A6%E4%B9%A0.html</loc>
     
     <lastmod>2024-03-03</lastmod>
     
@@ -65,7 +65,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/02/03/diary-2024-2/</loc>
+    <loc>http://larangekmno4.github.io/page/diary-2024-2.html</loc>
     
     <lastmod>2024-02-29</lastmod>
     
@@ -74,7 +74,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2024/01/02/diary-2024-1/</loc>
+    <loc>http://larangekmno4.github.io/page/diary-2024-1.html</loc>
     
     <lastmod>2024-02-01</lastmod>
     
@@ -83,7 +83,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2023/12/10/diary-12/</loc>
+    <loc>http://larangekmno4.github.io/page/diary-12.html</loc>
     
     <lastmod>2023-12-31</lastmod>
     
@@ -92,7 +92,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2023/12/10/20%E5%B2%81%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%BF%E6%9C%9B/</loc>
+    <loc>http://larangekmno4.github.io/page/20%E5%B2%81%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%BF%E6%9C%9B.html</loc>
     
     <lastmod>2023-12-11</lastmod>
     
@@ -101,7 +101,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2023/11/18/talking-202311/</loc>
+    <loc>http://larangekmno4.github.io/page/talking-202311.html</loc>
     
     <lastmod>2023-11-18</lastmod>
     
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2023/10/29/talking/</loc>
+    <loc>http://larangekmno4.github.io/page/talking.html</loc>
     
     <lastmod>2023-10-29</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>http://larangekmno4.github.io/2023/10/21/world/</loc>
+    <loc>http://larangekmno4.github.io/page/world.html</loc>
     
     <lastmod>2023-10-21</lastmod>
     
@@ -139,18 +139,11 @@
 
   <url>
     <loc>http://larangekmno4.github.io/</loc>
-    <lastmod>2024-07-10</lastmod>
+    <lastmod>2024-07-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>http://larangekmno4.github.io/tags/%E6%95%B0%E5%AD%A6%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2024-07-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
   
 
   
