@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://larangekmno4.github.io/2025/02/01/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942025-2/</loc>
+    
+    <lastmod>2025-01-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://larangekmno4.github.io/2025/01/12/%E6%B8%85%E5%8D%8E%E5%9B%AD%E4%B9%8B%E6%97%85%E2%80%94%E2%80%942025-1/</loc>
     
     <lastmod>2025-01-30</lastmod>
@@ -211,7 +220,7 @@
 
   <url>
     <loc>http://larangekmno4.github.io/</loc>
-    <lastmod>2025-01-30</lastmod>
+    <lastmod>2025-01-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
